@@ -21,38 +21,42 @@ In the absence of a direct "default" label, creating a proxy variable—such as 
 In a regulated financial context, choosing between a simple, interpretable model like Logistic Regression with Weight of Evidence (WoE) and a complex, high-performance model like Gradient Boosting involves key trade-offs. Simple models offer transparency, ease of implementation, and regulatory compliance due to their straightforward logic, making them easier to explain to auditors and stakeholders. However, they may sacrifice predictive power, potentially underfitting complex patterns in data. Conversely, complex models like Gradient Boosting excel at capturing intricate relationships, improving predictive accuracy. Yet, their "black-box" nature complicates interpretability, posing challenges for regulatory scrutiny and stakeholder trust. In a regulated environment, the preference often leans toward simpler models to meet Basel II’s transparency requirements, but hybrid approaches or ensemble methods with explainability tools (e.g., SHAP values) may balance performance and interpretability, depending on institutional priorities.
 
 ## Project Structure
+
 The project adheres to a standardized structure to ensure reproducibility, maintainability, and scalability:
 
-credit-risk-model/
-├── .github/workflows/ci.yml          # CI/CD pipeline configuration
-├── data/                            # Data folder (excluded from git)
-│   ├── raw/                         # Raw dataset (e.g., data.csv)
-│   └── processed/                   # Processed data for model training
-├── notebooks/
-│   └── 1.0-eda.ipynb                # Exploratory Data Analysis notebook
-├── src/
-│   ├── __init__.py                  # Package initialization
-│   ├── data_processing.py           # Feature engineering and preprocessing
-│   ├── train.py                     # Model training and MLflow tracking
-│   ├── predict.py                   # Inference script
-│   └── api/
-│       ├── main.py                  # FastAPI application for model serving
-│       └── pydantic_models.py       # Pydantic models for API validation
-├── tests/
-│   └── test_data_processing.py       # Unit tests for data processing
-├── Dockerfile                       # Docker configuration for API
-├── docker-compose.yml               # Docker Compose for local deployment
-├── requirements.txt                 # Project dependencies
-├── .gitignore                       # Git ignore file
-└── README.md                        # Project documentation
+credit-risk-model/ <br>
+├── .github/workflows/ci.yml # CI/CD pipeline configuration <br>
+├── data/ # Data folder (excluded from git) <br>
+│ ├── raw/ # Raw dataset (e.g., data.csv) <br>
+│ └── processed/ # Processed data for model training <br>
+├── notebooks/ <br>
+│ └── 1.0-eda.ipynb # Exploratory Data Analysis notebook <br>
+├── src/ <br>
+│ ├── **init**.py # Package initialization <br>
+│ ├── data_processing.py # Feature engineering and preprocessing <br>
+│ ├── train.py # Model training and MLflow tracking <br>
+│ ├── predict.py # Inference script <br>
+│ └── api/ <br>
+│ ├── main.py # FastAPI application for model serving <br>
+│ └── pydantic_models.py # Pydantic models for API validation <br>
+├── tests/ <br>
+│ └── test_data_processing.py # Unit tests for data processing <br>
+├── Dockerfile # Docker configuration for API <br>
+├── docker-compose.yml # Docker Compose for local deployment <br>
+├── requirements.txt # Project dependencies <br>
+├── .gitignore # Git ignore file <br>
+└── README.md # Project documentation <br>
+<br>
 
 ## etup Instructions
+
 ### Prerequisites
-Python 3.13.1
-numpy                   2.3.1
-pandas                  2.3.0
-pip                     25.1.1
-scipy                   1.16.0
-seaborn                 0.13.2
-smatplotlib             3.10.3
-scikit-learn            1.7.0
+
+Python 3.13.1 <br>
+numpy 2.3.1 <br>
+pandas 2.3.0 <br>
+pip 25.1.1 <br>
+scipy 1.16.0 <br>
+seaborn 0.13.2 <br>
+smatplotlib 3.10.3 <br>
+scikit-learn 1.7.0 <br>
