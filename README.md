@@ -48,7 +48,7 @@ credit-risk-model/ <br>
 └── README.md # Project documentation <br>
 <br>
 
-## etup Instructions
+
 
 ### Prerequisites
 
